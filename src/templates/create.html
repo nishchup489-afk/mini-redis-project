@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+</head>
+<body>
+    <h1>Create Profile</h1>
+
+    <form method="post" action="/profile/">
+        <label>First Name</label><br>
+        <input type="text" name="first_name" minlength="3" maxlength="20" required><br><br>
+
+        <label>Last Name</label><br>
+        <input type="text" name="last_name" minlength="3" maxlength="20" required><br><br>
+
+        <label>Username</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>GitHub</label><br>
+        <input type="url" name="github" required><br><br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>LinkedIn</label><br>
+        <input type="url" name="linkedin" required><br><br>
+
+        <label>Portfolio</label><br>
+        <input type="url" name="portfolio"><br><br>
+
+        <label>X / Twitter</label><br>
+        <input type="url" name="x"><br><br>
+
+        <button type="submit">Create Profile</button>
+    </form>
+
+    {% if profile %}
+        <button > 
+            <a href="/profile/{{username}}">
+            Go to your profile
+
+            </a>
+        </button>
+    {% endif %}
+</body>
+</html>
