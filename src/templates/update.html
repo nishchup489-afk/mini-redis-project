@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update {{ profile.username }}</title>
+</head>
+<body>
+    <h1>Update Profile</h1>
+
+    <form method="post" action="/profile/{{ profile.username }}/update">
+        <label>First Name</label>
+        <input 
+            type="text" 
+            name="first_name" 
+            value="{{ profile.first_name }}" 
+            required
+        >
+        <br><br>
+
+        <label>Last Name</label>
+        <input 
+            type="text" 
+            name="last_name" 
+            value="{{ profile.last_name }}" 
+            required
+        >
+        <br><br>
+
+        <label>Username</label>
+        <input 
+            type="text" 
+            name="username" 
+            value="{{ profile.username }}" 
+            required
+        >
+        <br><br>
+
+        <label>GitHub</label>
+        <input 
+            type="text" 
+            name="github" 
+            value="{{ profile.github }}" 
+            required
+        >
+        <br><br>
+
+        <label>Email</label>
+        <input 
+            type="email" 
+            name="email" 
+            value="{{ profile.email }}" 
+            required
+        >
+        <br><br>
+
+        <label>LinkedIn</label>
+        <input 
+            type="text" 
+            name="linkedin" 
+            value="{{ profile.linkedin }}" 
+            required
+        >
+        <br><br>
+
+        <label>Portfolio</label>
+        <input 
+            type="text" 
+            name="portfolio" 
+            value="{{ profile.portfolio or '' }}"
+        >
+        <br><br>
+
+        <label>X</label>
+        <input 
+            type="text" 
+            name="X" 
+            value="{{ profile.X or '' }}"
+        >
+        <br><br>
+
+        <button type="submit">Update Profile</button>
+    </form>
+
+    <br>
+
+    <a href="/profile/{{ profile.username }}">Back to profile</a>
+</body>
+</html>

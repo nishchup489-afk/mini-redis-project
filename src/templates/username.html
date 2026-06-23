@@ -36,6 +36,26 @@
 
     <hr>
 
-    <a href="/">Create another profile</a>
+    <a href="/profile/{{ profile.username }}/update">
+        Update your profile
+    </a>
+
+    <br><br>
+
+    <form method="post" action="/profile/{{ profile.username }}/delete">
+        <button type="submit">
+            Delete this profile
+        </button>
+    </form>
+
+    <br>
+
+    <a href="/profile/">
+        Create another profile
+    </a><br>
+
+    <a href="/profile/all">
+        Go back to feed
+    </a>
 </body>
 </html>

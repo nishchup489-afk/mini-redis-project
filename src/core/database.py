@@ -7,6 +7,8 @@ load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+# REMEMBER BES -> BASE , ENGINE , SESSION
+
 
 Base = declarative_base()
 
